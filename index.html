@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS LIST ADD FUNCTION -- Assignment </title>
+</head>
+<body>
+    <div class="cont">
+        <h2>LIST ADD FUNCTION</h2>
+        <input type="text"  id="inp">
+        <button onclick="startFunc()" id="btn">Add Item</button>
+        <ul id="list">
+           
+        </ul>
+    </div>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .cont{
+            height: 500px;
+            width: 500px;
+            background-color: cornsilk;
+            text-align: center;
+        }
+        .cont h2{
+            font-family: monospace;
+            font-size: 25px;
+        }
+        #inp {
+  max-width: 190px;
+  padding: 4px;
+  font-size: 1rem;
+  border: 1.5px solid #000;
+  border-radius: 0.5rem;
+  box-shadow: 2.5px 3px 0 #000;
+  outline: none;
+  transition: ease 0.25s;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+.input:focus {
+  box-shadow: 5.5px 7px 0 black;
+}
+
+        .cont #btn{
+    
+            background-color: #eee;
+ border: none;
+ padding: 3px 6px;
+ font-size: 1rem;
+ border-radius: 1rem;
+ color: lightcoral;
+ box-shadow: 0 0.4rem #dfd9d9;
+ cursor: pointer;
+}
+#btn:active {
+ color: white;
+ box-shadow: 0 0.2rem #dfd9d9;
+ transform: translateY(0.2rem);
+}
+
+#btn:hover:not(:disabled) {
+ background: lightcoral;
+ color: white;
+ text-shadow: 0 0.1rem #bcb4b4;
+}
+
+#btn:disabled {
+ cursor: auto;
+ color: grey;
+}
+li{
+    width: 0;
+    font-size: 20px;
+    font-family: math;
+    padding: 6px 6px;
+    align-items: center;
+}
+        
+    </style>
+    <script src="index.js"></script>
+</body>
+</html>
