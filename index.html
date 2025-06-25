@@ -1,89 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS LIST ADD FUNCTION -- Assignment </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative To-Do List</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #38bdf8, #60a5fa);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .todo-container {
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .todo-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .input-wrapper {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .input-wrapper input {
+      flex: 1;
+      padding: 10px 15px;
+      border: 2px solid #38bdf8;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .input-wrapper button {
+      background-color: #38bdf8;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+
+    .input-wrapper button:hover {
+      background-color: #0ea5e9;
+    }
+
+    ul.todo-list {
+      list-style: none;
+    }
+
+    ul.todo-list li {
+      background: #f1f5f9;
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    ul.todo-list li:hover {
+      background-color: #e2e8f0;
+    }
+
+    .task-name {
+      font-weight: 500;
+      color: #1e293b;
+    }
+    
+    .action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons .edit-btn,
+.action-buttons .delete-btn {
+  background-color: #38bdf8;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.action-buttons .edit-btn:hover {
+  background-color: #0ea5e9;
+}
+
+.action-buttons .delete-btn {
+  background-color: #ef4444;
+}
+
+.action-buttons .delete-btn:hover {
+  background-color: #dc2626;
+}
+  </style>
 </head>
 <body>
-    <div class="cont">
-        <h2>LIST ADD FUNCTION</h2>
-        <input type="text"  id="inp">
-        <button onclick="startFunc()" id="btn">Add Item</button>
-        <ul id="list">
-           
-        </ul>
+
+  <div class="todo-container">
+    <h2>🌟 My To-Do List</h2>
+    <div class="input-wrapper">
+      <input type="text" id="inp" placeholder="Add a new task..." />
+      <button onclick="startFunc()">Add</button>
     </div>
-    <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .cont{
-            height: 500px;
-            width: 500px;
-            background-color: cornsilk;
-            text-align: center;
-        }
-        .cont h2{
-            font-family: monospace;
-            font-size: 25px;
-        }
-        #inp {
-  max-width: 190px;
-  padding: 4px;
-  font-size: 1rem;
-  border: 1.5px solid #000;
-  border-radius: 0.5rem;
-  box-shadow: 2.5px 3px 0 #000;
-  outline: none;
-  transition: ease 0.25s;
-  margin-right: 5px;
-  margin-bottom: 15px;
-}
+    <p id="message" style="color: green; font-size: 15px; margin-bottom: 15px; text-align: center; font-weight: bold;"></p>
+    <ul class="todo-list" id="listinp">
+    </ul>
+  </div>
 
-.input:focus {
-  box-shadow: 5.5px 7px 0 black;
-}
-
-        .cont #btn{
-    
-            background-color: #eee;
- border: none;
- padding: 3px 6px;
- font-size: 1rem;
- border-radius: 1rem;
- color: lightcoral;
- box-shadow: 0 0.4rem #dfd9d9;
- cursor: pointer;
-}
-#btn:active {
- color: white;
- box-shadow: 0 0.2rem #dfd9d9;
- transform: translateY(0.2rem);
-}
-
-#btn:hover:not(:disabled) {
- background: lightcoral;
- color: white;
- text-shadow: 0 0.1rem #bcb4b4;
-}
-
-#btn:disabled {
- cursor: auto;
- color: grey;
-}
-li{
-    width: 0;
-    font-size: 20px;
-    font-family: math;
-    padding: 6px 6px;
-    align-items: center;
-}
-        
-    </style>
-    <script src="index.js"></script>
 </body>
+<script src="index.js"></script>
 </html>
